@@ -1,0 +1,52 @@
+using System;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace DzhunuskhodzhaevAmirxan
+{
+    class Program
+    {
+        delegate double Delegate(double r);
+        public static double LengthCircle(double r)
+        {
+            double lenght;
+            lenght = 2 * 3.14 * r;
+            return lenght;
+        }
+        public static double AriaCircle(double r)
+        {
+            double area;
+            area = 3.14 * r * r;
+            return area;
+        }
+        public static double ValueCircle(double r)
+        {
+            double value;
+            value = 3.14 * r * r * r * 4.0 / 3.0;
+            return value;
+        }
+        public static void Main()
+        {
+            double radius, area, length, volume;
+
+            Console.WriteLine("Введите значение R: ");
+            radius = double.Parse(Console.ReadLine());
+
+            Delegate deleg = LengthCircle;
+
+            length = deleg(radius);
+            deleg = AriaCircle;
+
+            area = deleg(radius);
+            deleg = ValueCircle;
+
+            volume = deleg(radius);
+
+            Console.WriteLine("Длина окружности: " + length.ToString());
+            Console.WriteLine("Площадь круга: " + area.ToString());
+            Console.WriteLine("Объем шара: " + volume.ToString());
+        }
+    } 
+}

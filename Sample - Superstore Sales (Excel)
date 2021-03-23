@@ -1,0 +1,204 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DzhunuskhodzhaevAmirxan
+{
+    class Program
+    {
+        public static void Main()
+        {
+            List<string> list = new List<string>();
+            list.Add("13.10.2010 Eldon Base for stackable storage shelf, platinum                                   20.10.2010" );
+            list.Add("01.10.2012 1.7 Cubic Foot Compact Cube Office Refrigerators                                   02.10.2012" );
+            list.Add("01.10.2012 Cardinal Slant-D? Ring Binder, Heavy Gauge Vinyl                                   03.10.2012" );
+            list.Add("10.07.2011 R380                                                                               12.07.2011" );
+            list.Add("28.08.2010 Holmes HEPA Air Purifier                                                           30.08.2010" );
+            list.Add("28.08.2010 G.E. Longer-Life Indoor Recessed Floodlight Bulbs                                  30.08.2010" );
+            list.Add("17.06.2011 Angle-D Binders with Locking Rings, Label Holders                                  17.06.2011" );
+            list.Add("17.06.2011 SAFCO Mobile Desk Side File, Wire Frame                                            18.06.2011" );
+            list.Add("24.03.2011 SAFCO Commercial Wire Shelving, Black                                              25.03.2011" );
+            list.Add("26.02.2010 Xerox 198                                                                          26.02.2010" );
+            list.Add("23.11.2010 Advantus Map Pennant Flags and Round Head Tacks                                    24.11.2010" );
+            list.Add("23.11.2010 Holmes HEPA Air Purifier                                                           24.11.2010" );
+            list.Add("08.06.2012 DS/HD IBM Formatted Diskettes, 200/Pack - Staples                                  09.06.2012" );
+            list.Add("08.06.2012 Wilson Jones 1' Hanging DublLock Ring Binders                                      10.06.2012" );
+            list.Add("04.08.2012 Ultra Commercial Grade Dual Valve Door Closer                                      04.08.2012" );
+            list.Add("30.05.2011 #10-4 1/8' x 9 1 / 2' Premium Diagonal Seam Envelopes                              31.05.2011" );
+            list.Add("25.11.2009 Hon 4-Shelf Metal Bookcases                                                        26.11.2009" );
+            list.Add("14.02.2012 Lesro Sheffield Collection Coffee Table, End Table, Center Table, Corner Table     16.02.2012" );
+            list.Add("01.10.2012 g520                                                                               16.02.2012" );
+            list.Add("15.04.2012 LX 788                                                                             22.04.2012" );
+            list.Add("15.04.2012 Avery 52                                                                           19.04.2012" );
+            list.Add("12.03.2010 Plymouth Boxed Rubber Bands by Plymouth                                            14.03.2010" );
+            list.Add("12.03.2010 GBC Pre-Punched Binding Paper, Plastic, White, 8-1/2' x 11                         14.03.2010" );
+            list.Add("09.03.2011 Maxell 3.5' DS/HD IBM-Formatted Diskettes, 10/Pack                                 11.03.2011" );
+            list.Add("09.03.2011 Newell 335                                                                         14.03.2011" );
+            list.Add("04.08.2012 SANFORD Liquid Accent? Tank-Style Highlighters                                     06.08.2012" );
+            list.Add("06.05.2011 Canon PC940 Copier                                                                 07.05.2011" );
+            list.Add("23.12.2010 Tenex Personal Project File with Scoop Front Design, Black                         25.12.2010" );
+            list.Add("08.11.2010 Col-Erase? Pencils with Erasers                                                    13.11.2010" );
+            list.Add("21.10.2012 Imation 3.5' DS/HD IBM Formatted Diskettes, 10/Pack                                22.10.2012" );
+            list.Add("01.01.2011 White Dual Perf Computer Printout Paper,2700 Sheets, 1 Part, Heavyweight           02.01.2011" );
+            list.Add("01.10.2012 Self-Adhesive Address Labels for Typewriters by Universa                           03.01.2011" );
+            list.Add("10.10.2011 Accessory37                                                                        11.10.2011" );
+            list.Add("10.10.2011 Fuji 5.2GB DVD-RAM                                                                 11.10.2011" );
+            list.Add("23.09.2010 Bevis Steel Folding Chairs                                                         25.09.2010" );
+            list.Add("19.07.2011 Avery Binder Labels                                                                19.07.2011" );
+            list.Add("09.10.2009 Hon Every-Day? Chair Series Swivel Task Chairs                                     09.10.2009" );
+            list.Add("09.10.2009 IBM Multi-Purpose Copy Paper, 8 1/2 x 11', Case                                    11.10.2009" );
+            list.Add("09.10.2009 Global Troy? Executive Leather Low-Back Tilter                                     10.10.2009" );
+            list.Add("09.12.2010 XtraLife? ClearVue? Slant-D? Ring Binders by Cardinal                              11.12.2010" );
+            list.Add("08.10.2012 Computer Printout Paper with Letter-Trim Perforations                              10.10.2012" );
+            list.Add("02.05.2012 6160                                                                               03.05.2012" );
+            list.Add("08.03.2010 Avery 49                                                                           08.03.2010" );
+            list.Add("28.05.2011 Hoover Portapower? Portable Vacuum                                                 30.05.2011" );
+            list.Add("19.09.2010 Timeport L7089                                                                     21.09.2010" );
+            list.Add("31.08.2011 Avery 510                                                                          01.09.2011" );
+            list.Add("31.08.2011 Xerox 1881                                                                         02.09.2011" );
+            list.Add("31.08.2011 LX 788                                                                             02.09.2011" );
+            list.Add("31.08.2011 Cardinal Slant-D? Ring Binder, Heavy Gauge Vinyl                                   01.09.2011" );
+            list.Add("08.07.2011 Memorex 4.7GB DVD-RAM, 3/Pack                                                      10.07.2011" );
+            list.Add("30.01.2009 Unpadded Memo Slips                                                                01.02.2009" );
+            list.Add("08.01.2012 Adam Telephone Message Book W/Dividers/Space For Phone Numbers, 5 1/4'X8 1 / 2'    13.01.2012" );
+            list.Add("07.11.2010 Eldon Expressions? Desk Accessory, Wood Pencil Holder, Oak                         08.11.2010" );
+            list.Add("29.04.2010 Bell Sonecor JB700 Caller ID                                                       01.05.2010" );
+            list.Add("31.12.2011 Avery Arch Ring Binders                                                            03.01.2012" );
+            list.Add("12.08.2009 APC 7 Outlet Network SurgeArrest Surge Protector                                   13.08.2009" );
+            list.Add("12.08.2009 Deflect-o RollaMat Studded, Beveled Mat for Medium Pile Carpeting                  15.08.2009" );
+            list.Add("12.11.2011 Accessory4                                                                         08.11.2010" );
+            list.Add("12.11.2011 Personal Creations? Ink Jet Cards and Labels                                       01.05.2010" );
+            list.Add("20.01.2012 High Speed Automatic Electric Letter Opener                                        03.01.2012" );
+            list.Add("20.03.2009 Xerox 1966                                                                         13.08.2009" );
+            list.Add("21.07.2012 Xerox 213                                                                          15.08.2009" );
+            list.Add("21.07.2012 Boston Electric Pencil Sharpener, Model 1818, Charcoal Black                       19.11.2011" );
+            list.Add("12.06.2012 Hammermill CopyPlus Copy Paper (20Lb. and 84 Bright)                               19.11.2011" );
+            list.Add("15.01.2009 Telephone Message Books with Fax/Mobile Section, 5 1/2' x 3 3 / 16'                20.01.2012" );
+            list.Add("15.01.2009 Crate-A-Files?                                                                     22.03.2009" );
+            list.Add("04.06.2010 Angle-D Binders with Locking Rings, Label Holders                                  28.07.2012" );
+            list.Add("18.02.2010 80 Minute CD-R Spindle, 100/Pack - Staples                                         25.07.2012" );
+            list.Add("16.11.2011 Bush Westfield Collection Bookcases, Dark Cherry Finish, Fully Assembled           15.06.2012" );
+            list.Add("16.11.2011 12-1/2 Diameter Round Wall Clock                                                   20.01.2009" );
+            list.Add("16.11.2011 SAFCO Arco Folding Chair                                                           20.01.2009" );
+            list.Add("07.08.2011 #10 White Business Envelopes,4 1/8 x 9 1/2                                         08.06.2010" );
+            list.Add("08.06.2010 3M Office Air Cleaner                                                              19.02.2010" );
+            list.Add("17.10.2009 Global Leather and Oak Executive Chair, Black                                      18.11.2011" );
+            list.Add("28.08.2011 Xerox 1936                                                                         18.11.2011" );
+            list.Add("29.09.2011 Xerox 214                                                                          18.11.2011" );
+            list.Add("29.09.2011 Carina Double Wide Media Storage Towers in Natural & Black                         11.08.2011" );
+            list.Add("04.05.2012 Staples? General Use 3-Ring Binders                                                09.06.2010" );
+            list.Add("17.05.2011 Xerox 1904                                                                         17.10.2009" );
+            list.Add("17.05.2011 Luxo Professional Combination Clamp-On Lamps                                       29.08.2011" );
+            list.Add("17.05.2011 Xerox 217                                                                          01.10.2011" );
+            list.Add("17.05.2011 Revere Boxed Rubber Bands by Revere                                                30.09.2011" );
+            list.Add("17.05.2011 Acco Smartsocket? Table Surge Protector, 6 Color-Coded Adapter Outlets             08.05.2012" );
+            list.Add("17.11.2009 Tennsco Snap-Together Open Shelving Units, Starter Sets and Add-On Units           18.05.2011" );
+            list.Add("10.10.2011 Hon 4070 Series Pagoda? Round Back Stacking Chairs                                 18.05.2011" );
+            list.Add("07.10.2012 Xerox 1887                                                                         18.05.2011" );
+            list.Add("07.10.2012 Xerox 1891                                                                         18.05.2011" );
+            list.Add("07.10.2012 Avery 506                                                                          19.05.2011" );
+            list.Add("13.08.2011 Bush Heritage Pine Collection 5-Shelf Bookcase, Albany Pine Finish, *Special Order 18.11.2009" );
+            list.Add("16.08.2011 Lifetime Advantage? Folding Chairs, 4/Carton                                       12.10.2011" );
+            list.Add("16.08.2011 Microsoft Natural Multimedia Keyboard                                              08.10.2012" );
+            list.Add("16.08.2011 Staples Wirebound Steno Books, 6' x 9', 12/Pack                                    08.10.2012" );
+            list.Add("04.03.2009 GBC Pre-Punched Binding Paper, Plastic, White, 8-1/2' x 11                         07.10.2012" );
+            list.Add("18.08.2009 Bevis Boat-Shaped Conference Table                                                 16.08.2011" );
+            list.Add("16.11.2010 Linden? 12 Wall Clock With Oak Frame                                               17.08.2011" );
+            list.Add("27.05.2011 Newell 326                                                                         17.08.2011" );
+            list.Add("27.05.2011 Prismacolor Color Pencil Set                                                       17.08.2011" );
+            list.Add("23.08.2010 Xerox Blank Computer Paper                                                         04.03.2009" );
+            list.Add("19.08.2011 600 Series Flip                                                                    20.08.2009" );
+            list.Add("03.01.2012 Fellowes Recycled Storage Drawers                                                  17.11.2010" );
+            list.Add("29.11.2012 Satellite Sectional Post Binders                                                   29.05.2011" );
+            list.Add("17.03.2012 Deflect-o DuraMat Antistatic Studded Beveled Mat for Medium Pile Carpeting         03.06.2011" );
+            list.Add("12.04.2010 Avery 487                                                                          24.08.2010" );
+            list.Add("24.08.2010 Bevis Round Conference Table Top & Single Column Base                              21.08.2011" );
+            list.Add("04.07.2011 GBC Twin Loop? Wire Binding Elements, 9/16' Spine, Black                           05.01.2012" );
+            list.Add("10.11.2010 Hanging Personal Folder File                                                       30.11.2012" );
+            list.Add("24.06.2010 Bevis Round Conference Table Top, X-Bas                                            18.03.2012" );
+            list.Add("24.06.2010 5125                                                                               19.04.2010" );
+            list.Add("19.09.2012 Electrix Halogen Magnifier Lamp                                                    26.08.2010" );
+            list.Add("19.09.2012 Canon BP1200DH 12-Digit Bubble Jet Printing Calculator                             05.07.2011" );
+            list.Add("24.12.2011 Fellowes Black Plastic Comb Bindings                                               12.11.2010" );
+            list.Add("23.03.2012 Polycom ViewStation? Adapter H323 Videoconferencing Unit                           25.06.2010" );
+            list.Add("15.10.2011 Hon GuestStacker Chair                                                             25.06.2010" );
+            list.Add("07.08.2010 Eldon? Wave Desk Accessories                                                       19.09.2012" );
+            list.Add("03.03.2009 Sharp AL-1530CS Digital Copier                                                     21.09.2012" );
+            list.Add("09.02.2010 Tennsco Lockers, Gray                                                              28.12.2011" );
+            list.Add("09.02.2010 Avery 4027 File Folder Labels for Dot Matrix Printers, 5000 Labels per Box, White  24.03.2012" );
+            list.Add("17.01.2009 Newell 323                                                                         17.10.2011" );
+            list.Add("17.01.2009 Global Enterprise Series Seating High-Back Swivel/Tilt Chairs                      08.08.2010" );
+            list.Add("30.08.2010 Spiral Phone Message Books with Labels by Adams                                    10.03.2009" );
+            list.Add("30.08.2010 Crate-A-Files?                                                                     09.02.2010" );
+            list.Add("11.09.2009 Bell Sonecor JB700 Caller ID                                                       11.02.2010" );
+            list.Add("11.09.2009 Holmes 99% HEPA Air Purifier                                                       17.01.2009" );
+            list.Add("16.07.2009 Xerox 224                                                                          19.01.2009" );
+            list.Add("15.11.2012 Xerox 1906                                                                         31.08.2010" );
+            list.Add("10.09.2011 GBC Pre-Punched Binding Paper, Plastic, White, 8-1/2' x 11                         31.08.2010" );
+            list.Add("10.04.2011 Xerox 188                                                                          12.09.2009" );
+            list.Add("10.04.2011 Xerox 1932                                                                         12.09.2009" );
+            list.Add("10.04.2011 GBC Linen Binding Covers                                                           17.07.2009" );
+            list.Add("09.10.2011 GBC Recycled Grain Textured Covers                                                 20.11.2012" );
+            list.Add("09.10.2011 Sauder Facets Collection Library, Sky Alder Finish                                 14.09.2011" );
+            list.Add("23.10.2012 Fellowes Basic 104-Key Keyboard, Platinum                                          13.04.2011" );
+            list.Add("08.01.2012 Kensington 7 Outlet MasterPiece Power Center with Fax/Phone Line Protection        13.04.2011" );
+            list.Add("25.01.2010 O'Sullivan 3-Shelf Heavy-Duty Bookcases                                            11.04.2011" );
+            list.Add("25.01.2010 G.E. Longer-Life Indoor Recessed Floodlight Bulbs                                  11.10.2011" );
+            list.Add("27.01.2011 Panasonic KX-P1150 Dot Matrix Printer                                              10.10.2011" );
+            list.Add("27.01.2011 Newell 327                                                                         25.10.2012" );
+            list.Add("27.01.2011 Xerox 1893                                                                         08.01.2012" );
+            list.Add("27.08.2009 Hon Deluxe Fabric Upholstered Stacking Chairs, Rounded Back                        27.01.2010" );
+            list.Add("17.03.2011 Eldon Radial Chair Mat for Low to Medium Pile Carpets                              26.01.2010" );
+            list.Add("17.03.2011 DAX Copper Panel Document Frame, 5 x 7 Size                                        29.01.2011" );
+            list.Add("06.06.2012 O'Sullivan 2-Shelf Heavy-Duty Bookcases                                            27.01.2011" );
+            list.Add("11.04.2011 Tenex 46' x 60' Computer Anti-Static Chairmat, Rectangular Shaped                  29.01.2011" );
+            list.Add("11.04.2011 Wirebound Message Books, 2 7/8' x 5', 3 Forms per Page                             29.08.2009" );
+            list.Add("11.04.2011 Memorex Slim 80 Minute CD-R, 10/Pack                                               19.03.2011" );
+            list.Add("06.11.2012 Aluminum Document Frame                                                            18.03.2011" );
+            list.Add("06.11.2012 Memorex 80 Minute CD-R Spindle, 100/Pack                                           08.06.2012" );
+            list.Add("16.05.2012 Multi-Use Personal File Cart and Caster Set, Three Stacking Bins                   13.04.2011" );
+            list.Add("09.04.2012 Memorex Slim 80 Minute CD-R, 10/Pack                                               14.04.2011" );
+            list.Add("09.04.2012 Multi-Use Personal File Cart and Caster Set, Three Stacking Bins                   14.04.2011" );
+
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Дата заказа|                                    Что заказали                                 |Дата прибытия|");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------");
+
+            foreach (var item in list)
+            {
+                Console.WriteLine("{0}", item);
+            }
+
+            Console.WriteLine("\n");
+            Console.WriteLine("(Список до) Введите число 0 чтобы обнулить список ");
+
+            int delate = int.Parse(Console.ReadLine());
+
+            if (delate == 0)
+            {
+                Console.Clear();
+            }
+
+            Console.WriteLine("Введите число строк которые хотите удалить(с конца)");
+            int number = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < number; i++)
+            {
+                list.Remove(list.Last());
+            }
+
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Дата заказа|                                    Что заказали                                 |Дата прибытия|");
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------");
+
+            foreach (var items in list)
+            {
+                Console.WriteLine("{0}", items);
+            }
+        }
+    }
+}

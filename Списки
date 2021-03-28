@@ -1,0 +1,195 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DzhunuskhodzhaevAmirxan
+{
+    class Program
+    {
+        public static void Main()
+        {
+            List<int> number1 = new List<int>();
+            number1.Add(1);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(0);
+            number1.Add(1);
+
+            List<int> number2 = new List<int>();
+            number2.Add(2);
+            number2.Add(4);
+            number2.Add(6);
+            number2.Add(8);
+            number2.Add(10);
+            number2.Add(12);
+            number2.Add(14);
+            number2.Add(16);
+            number2.Add(18);
+            number2.Add(20);
+            number2.Add(22);
+            number2.Add(24);
+            number2.Add(26);
+            number2.Add(28);
+            number2.Add(30);
+            number2.Add(32);
+            number2.Add(34);
+            number2.Add(36);
+            number2.Add(38);
+            number2.Add(40);
+            number2.Add(42);
+            number2.Add(44);
+            number2.Add(46);
+            number2.Add(48);
+            number2.Add(50);
+            number2.Add(52);
+            number2.Add(54);
+            number2.Add(56);
+            number2.Add(58);
+            number2.Add(60);
+            number2.Add(62);
+            number2.Add(64);
+            number2.Add(66);
+            number2.Add(68);
+            number2.Add(70);
+            number2.Add(72);
+            number2.Add(74);
+            number2.Add(76);
+            number2.Add(78);
+            number2.Add(80);
+            number2.Add(82);
+            number2.Add(84);
+            number2.Add(86);
+            number2.Add(88);
+            number2.Add(90);
+            
+            Console.WriteLine("Содержание списка(число в списке):");
+
+            int numb = int.Parse(Console.ReadLine());
+
+            if (number2.Contains(numb))
+            {
+                Console.WriteLine("7145\n");
+            }
+            else
+            {
+                Console.WriteLine("5741\n");
+            }
+            Console.WriteLine("Сумма элементов списка:");
+            Console.WriteLine(number2.Sum());
+
+            Console.WriteLine("");
+
+            Console.WriteLine("Произведение элементов списка:");
+            int result = 1;
+            for(int i = 0; i <= number2.Count(); i++)
+            {
+                result *= number2.Count();
+            }
+            Console.WriteLine(result);
+
+            Console.WriteLine("");
+
+            Console.WriteLine("Максимальный элемент в списке");
+            Console.WriteLine(number2.Max());
+        }  
+    }
+}

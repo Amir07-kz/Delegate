@@ -1,0 +1,456 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Collections
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            One_EX();
+            Two_EX();
+            Three_EX();
+            Four_EX();
+            Five_EX();
+            Six_EX();
+            Seven_EX();
+            Eighth_EX();
+            Nine_EX();
+        }
+        public static void One_EX()
+        {
+            List<Book> books = new List<Book>{new Book("1"), new Book("2")};
+            Print(books);
+            books.Add(new Book("book 2"));
+            Console.WriteLine("New book :");
+            Print(books);
+            Console.WriteLine("");
+        }
+
+        public static void Two_EX()
+        {
+            List<int> first = new List<int> { 1, 2, 3, 4, 5 };
+            List<int> second = new List<int> { 10, 9, 8, 7, 6 };
+
+            List<int> newnumber = new List<int>();
+            newnumber.AddRange(first);
+            newnumber.AddRange(second);
+
+            newnumber.Sort();
+            newnumber.Reverse();
+            Console.WriteLine("Объединение");
+            Print(newnumber);
+            Console.WriteLine("");
+        }
+
+        public static void Three_EX()
+        {
+            List<int> numbers = new List<int>{-3 , 12 , 33 , 44, -1 , 23, -22, -23, 20};
+            List<int> positive = new List<int>();
+            List<int> index = new List<int>();
+
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if(numbers[i] > 0)
+                {
+                    positive.Add(numbers[i]);
+                }
+            }
+            Console.WriteLine("Положительные числа");
+            positive.Sort();
+            int a = 0;
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] > 0)
+                {
+                    numbers[i] = positive[a];
+                    a++;
+                }
+            }
+            
+            Print(numbers);
+            Console.WriteLine("");
+            
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if(i % 2 == 0)
+                {
+                    index.Add(numbers[i]);
+                }
+            }
+            index.Sort();
+            a = 0;
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    numbers[i] = index[a];
+                    a++;
+                }
+            }
+            Console.WriteLine("Элементы с четными порядковыми номерами в списке");
+            Print(numbers);
+            Console.WriteLine("");
+        }
+
+        public static void Four_EX()
+        {
+            List<int> first = new List<int> {1, 2, 2, 8};
+            List<int> second = new List<int> {8, 2, 2, 1};
+
+            bool a = true;
+
+            foreach (int e in first)
+            {
+                if (!(second.Contains(e)) && a != false)
+                {
+                    a = false;
+                }
+            }
+            
+            foreach (int b in second)
+            {
+                if (!(first.Contains(b)) && a != false)
+                {
+                    a = false;
+                }
+            }
+
+            if (a == true)
+            {
+                Console.WriteLine("Множества совпадают");
+            }
+            else Console.WriteLine("Множества не совпадают");
+            Console.WriteLine("");
+        }
+
+        public static void Five_EX()
+        {
+            List<int> numbers = new List<int> {1, 2, 3, 4, 5};
+            List<int> past_part = new List<int>();
+            List<int> newn = new List<int>();
+            
+            newn.Add(numbers[0]);
+
+            for (int i = 1; i < numbers.Count; i++)
+            {
+                past_part.Add(numbers[i-1]);
+                newn.Add(numbers[i]);
+                newn.AddRange(past_part);
+            }
+            Console.WriteLine("После каждого элемента добавьте предшествующую ему часть списка");
+            Print(newn);
+            Console.WriteLine("");
+        }
+
+        public static void Six_EX()
+        {
+            List<char> text = new List<char>{'i','t','m','a','t','h','r','e','p','e','t','i','t','o','r','t','h','r','e','p','e','t','i','t','o','r'};
+            StringBuilder stringn = new StringBuilder();
+            for (int i = 0; i < text.Count; i++)
+            {
+                stringn.Append(text[i]);
+            }
+
+            while (stringn.ToString().Contains("itmathrepetitor"))
+            {
+                stringn.Replace("itmathrepetitor", "silence");
+            }
+
+            text.Clear();
+            for (int i = 0; i < stringn.Length; i++)
+            {
+                text.Add(stringn[i]);
+            }
+            Console.WriteLine("Замените каждое вхождение слова itmathrepetitor на silence");
+            Console.WriteLine(stringn);
+            Console.WriteLine("");
+        }
+
+        public static void Seven_EX()
+        {
+            LinkedList<int> count = new LinkedList<int>();
+            
+            string line;
+            System.IO.StreamReader file = new System.IO.StreamReader(@"text.txt");  
+            while((line = file.ReadLine()) != null)
+            {
+                count.AddLast(line.Length);
+                
+            } 
+            file.Close();
+
+            foreach (int i in count)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        public static void Eighth_EX()
+        {
+            List<string> group1 = new List<string>{"A", "D", "G"};
+            List<string> group2 = new List<string>{"B", "E", "H"};
+            List<string> group3 = new List<string>{"C", "F", "I"};
+            
+            LinkedList<List<string>> grops = new LinkedList<List<string>>();
+            grops.AddLast(group1);
+            grops.AddLast(group2);
+            grops.AddLast(group3);
+
+            foreach (List<string> group in grops)
+            {
+                foreach (string student in group)
+                {
+                    Console.WriteLine(student);
+                }
+            }
+            Console.WriteLine("");
+        }
+
+        public static void Nine_EX()
+        {
+            Student student1 = new Student("Фамилия 1", "Имя 1", "Отчество 1", 2000, 1, new int[] {2, 3, 3, 4, 5}, 1);
+            Student student2 = new Student("Фамилия 2", "Имя 2", "Отчество 2", 2001, 2, new int[] {2, 2, 5, 4, 2}, 2);
+            Student student3 = new Student("Фамилия 3", "Имя 3", "Отчество 3", 2002, 3, new int[] {3, 3, 3, 3, 4}, 3);
+            Student student4 = new Student("Фамилия 4", "Имя 4", "Отчество 4", 2003, 4, new int[] {4, 4, 4, 2, 3}, 2);
+            Student student5 = new Student("Фамилия 5", "Имя 5", "Отчество 5", 2004, 3, new int[] {5, 5, 5, 5, 5}, 3);
+            Student student6 = new Student("Фамилия 6", "Имя 6", "Отчество 6", 2001, 2, new int[] {2, 3, 4, 4, 3}, 1);
+            Student student7 = new Student("Фамилия 7", "Имя 7", "Отчество 7", 2002, 1, new int[] {4, 4, 4, 5, 5}, 2);
+            Student student8 = new Student("Фамилия 8", "Имя 8", "Отчество 8", 2003, 3, new int[] {4, 4, 5, 4, 3}, 3);
+            Student student9 = new Student("Фамилия 9", "Имя 9", "Отчество 9", 2005, 4, new int[] {5, 4, 3, 4, 4}, 1);
+
+
+
+            List<Student> students = new List<Student> {student1, student2, student3, student4, student5, student6, student7, student8, student9};
+            
+            var sorted = students.OrderBy(a => a.course).ThenBy(b => b.surname).ToList();
+            Print(sorted);
+            
+            double[] average_appraisal = FindAverage(sorted);
+            int n = 5;
+            Console.WriteLine("Средние баллы по группам:");
+            foreach (double average_in_course in average_appraisal)
+            {
+                Console.WriteLine($"{n}: {average_in_course}");
+                n += 1;
+            }
+            string[] youngAndOld = FindOldAndYoung(sorted);
+            Console.WriteLine($"Самый молодой студент: {youngAndOld[0]}");
+            Console.WriteLine($"Самый старший студент: {youngAndOld[1]}");
+
+            string[] theBest = FindTheBest(sorted);
+            n = 5;
+            Console.WriteLine("Лучшие ученики по группам:");
+            foreach (string student in theBest)
+            {
+                Console.WriteLine($"{n}: {student}");
+                n += 1;
+            }
+        }
+
+        public static double[] FindAverage(List<Student> students)
+        {
+            double[] averages = new double[3];
+
+            int first_course = 0;
+            int first_all = 0;
+            int second_course = 0;
+            int second_all = 0;
+            int third_course = 0;
+            int third_all = 0;
+
+
+            foreach (var student in students)
+            {
+                if (student.group == 5)
+                {
+                    first_course += 1;
+                    foreach (var appraisal in student.appraisals)
+                    {
+                        first_all += appraisal;
+                    }
+                }
+                if (student.group == 6)
+                {
+                    second_course += 1;
+                    foreach (var appraisal in student.appraisals)
+                    {
+                        second_all += appraisal;
+                    }
+                }
+                if (student.group == 7)
+                {
+                    third_course += 1;
+                    foreach (var appraisal in student.appraisals)
+                    {
+                        third_all += appraisal;
+                    }
+                }
+            }
+            averages[0] = (first_all * 1.0) / (first_course*5.0);
+            averages[1] = (second_all * 1.0) / (second_course*5.0);
+            averages[2] = (third_all * 1.0) / (third_course*5.0);
+            
+            
+            return averages;
+        }
+
+        public static string[] FindOldAndYoung(List<Student> students)
+        {
+            int min = Int32.MaxValue;
+            int max = Int32.MinValue;
+            string mini = "";
+            string maxi = "";
+            
+            foreach (Student student in students)
+            {
+                if (student.year_of_birth < min)
+                {
+                    string fio = student.surname + " " + student.name + " " + student.fathername;
+                    mini = fio;
+                    min = student.year_of_birth;
+                }
+                if (student.year_of_birth > max)
+                {
+                    string fio = student.surname + " " + student.name + " " + student.fathername;
+                    maxi = fio;
+                    max = student.year_of_birth;
+                }
+            }
+
+            return new string[] {mini, maxi};
+        }
+
+        public static string[] FindTheBest(List<Student> students)
+        {
+            double max5 = Double.MinValue;
+            
+            double max6 = Double.MinValue;
+            
+            double max7 = Double.MinValue;
+            
+            string maxi5 = "";
+            
+            string maxi6 = "";
+            
+            string maxi7 = "";
+            
+            foreach (Student student in students)
+            {
+                if (student.group == 5)
+                {
+                    int sum = 0;
+                    foreach (int value in student.appraisals)
+                    {
+                        sum += value;
+                    }
+                    double average = (sum * 1.0) / 5.0;
+                    
+                    if (average > max5)
+                    {
+                        string fio = student.surname + " " + student.name + " " + student.fathername;
+                        maxi5 = fio;
+                        max5 = average;
+                    }
+                }
+                if (student.group == 6)
+                {
+                    int sum = 0;
+                    foreach (int value in student.appraisals)
+                    {
+                        sum += value;
+                    }
+                    double average = (sum * 1.0) / 5.0;
+
+                    if (average > max6)
+                    {
+                        string fio = student.surname + " " + student.name + " " + student.fathername;
+                        maxi6 = fio;
+                        max6 = average;
+                    }
+                }
+                if (student.group == 7)
+                {
+                    int sum = 0;
+                    foreach (int value in student.appraisals)
+                    {
+                        sum += value;
+                    }
+                    double average = (sum * 1.0) / 5.0;
+
+                    if (average > max7)
+                    {
+                        string fio = student.surname + " " + student.name + " " + student.fathername;
+                        maxi7 = fio;
+                        max7 = average;
+                    }
+                }
+            }
+            return new string[]{maxi5, maxi6, maxi7};
+        }
+   
+        public static void Print(List<Book> Books)
+        {
+            foreach (Book book in Books)
+            {
+                Console.WriteLine(book.name);
+            }
+        }
+
+        public static void Print(List<int> Numbers)
+        {
+            foreach (int number in Numbers)
+            {
+                Console.WriteLine(number);
+            }
+        }
+        
+        public static void Print(List<Student> students)
+        {
+            foreach (Student student in students)
+            {
+                Console.Write($"{student.surname} {student.name} {student.fathername} {student.course} {student.year_of_birth}");
+                int[] appraisals = student.appraisals;
+                Console.Write($" {student.group}\n");
+                foreach (int appraisal in appraisals)
+                {
+                    Console.Write($"{appraisal} ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+
+    class Book
+    {
+        public string name { get; }
+
+        public Book(string Name)
+        {
+            name = Name;
+        }
+    }
+
+    class Student
+    {
+        public string surname { get; set; }
+        public string name { get; set; }
+        public string fathername { get; set; }
+        public int year_of_birth { get; set; }
+        public int course { get; set; }
+        public int[] appraisals { get; set; }
+        public int group { get; set; }
+        public Student(string Surname, string Name, string Fathername, int YearOfBirth, int Course, int[] Appraisals, int Group)
+        {
+            surname = Surname;
+            name = Name;
+            fathername = Fathername;
+            year_of_birth = YearOfBirth;
+            course = Course;
+            appraisals = Appraisals;
+            group = Group;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CONTROL_WORK_2
+{
+    class Lists
+    {
+        static void Main()
+        {
+            List<int> val1 = new List<int> { 1, 2, 3, 4, 5, 6, 7 };
+            List<int> val2 = new List<int> { 1, 41, 23, 4, 6, 122 };
+            IEnumerable<int> result = val1.AsQueryable().Intersect(val2);
+            Console.WriteLine("Пересечение обоих списков...");
+            foreach (int a in result)
+            {
+                Console.WriteLine(a);
+            }
+        }
+    }
+}

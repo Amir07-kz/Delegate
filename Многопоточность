@@ -11,6 +11,7 @@ namespace Multithreading
     {
         public static void WriteSecond()
         {
+            Thread.Sleep(300);
             Random rand = new Random();
             int[,] arr1_2, arr2_2, arr3_2;
 
@@ -72,6 +73,7 @@ namespace Multithreading
                 for (int j = 0; j < arr1_2.GetLength(1); j++)
                 {
                     Console.Write((arr3_2[i, j] * number) + " ");
+                    Thread.Sleep(300);
                 }
                 Console.WriteLine();
             }
@@ -141,10 +143,12 @@ namespace Multithreading
                 for (int j = 0; j < arr1.GetLength(1); j++)
                 {
                     Console.Write((arr3[i, j] * number) + " ");
+                    Thread.Sleep(300);
                 }
                 Console.WriteLine();
             }
             Console.WriteLine("Введите число для умножения матрицы на число(для сложения):");
+            Console.ReadKey();
         }
     }
 }
